@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PokemonCard from './pokemonCard';
+import PokemonCard from './components/pokemonCard';
 /*
 Consuma los servicios del pokemon API
 Haga un catalogo del listado de pokemons

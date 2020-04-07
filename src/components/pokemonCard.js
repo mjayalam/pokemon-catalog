@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './pokemonCard.module.css';
-import PokemonInfo from './pokemonInfo';
+import styles from './styles/pokemonCard.module.css';
+import PokemonInfo from './components/pokemonInfo';
 
 class PokemonCard extends React.Component {
     constructor(props){

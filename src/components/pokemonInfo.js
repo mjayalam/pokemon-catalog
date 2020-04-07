@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './pokemonInfo.module.css';
+import styles from './styles/pokemonInfo.module.css';
 
 class PokemonInfo extends React.Component{
     constructor(props){
