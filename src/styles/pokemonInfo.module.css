@@ -21,5 +21,7 @@
     height: auto;
     background-color: rgb(222, 234, 235);
     position: absolute;
+    right: 4px;
+    width: 100px;
 
 }

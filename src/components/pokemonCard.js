@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './styles/pokemonCard.module.css';
-import PokemonInfo from './components/pokemonInfo';
+import styles from '../styles/pokemonCard.module.css';
+import PokemonInfo from './pokemonInfo';
 
 class PokemonCard extends React.Component {
     constructor(props){
@@ -42,22 +42,25 @@ class PokemonCard extends React.Component {
     }
     render() {
         let url = (!this.state.isHovered ? this.state.imageFront : this.state.imageBack);
-        if(this.state.imageFront){
+        
             return (
-              <div className="col-sm-3" >
-                <div className={styles.pokemonContainer} onMouseEnter={(e) => this.setImage(e,true)} onMouseLeave={(e) => this.setImage(e,false)}>
-                  <img alt={this.props.name} src={url}></img>
+              <div className="card col-sm-12 col-md-3" onMouseEnter={(e) => this.setImage(e,true)} onMouseLeave={(e) => this.setImage(e,false)} >
+                <img className="card-img-top" alt={this.props.name} src={url}></img>  
+                <div className="card-body" >
                   <p styles={styles.p}>{this.props.name}</p>
+                  
                 </div>
-                { 
-                this.state.isHovered && 
-                <PokemonInfo height={this.state.height} weight={this.state.weight}/>
-                }
+                  
+                  
+                
+                  
+                  { 
+                  this.state.isHovered && 
+                  <PokemonInfo height={this.state.height} weight={this.state.weight}/>
+                  }
               </div>
             );
-        }else{
-            return <img alt="Cargando" src="./loading.gif"></img>;
-        }
+        
 
     }
 };
